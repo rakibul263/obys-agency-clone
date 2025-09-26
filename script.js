@@ -41,7 +41,7 @@ tl.to("#loader", {
   display: "none",
 })
 tl.from("#hero-1 h1, #hero-2 h1, #hero-3 h1, #hero-3 h2,  #hero-3 h3, #hero-4 h1 ", {
-  y: 120,
+  y: 150,
   stagger: 0.2,
 })
 tl.from("#nav", {
@@ -58,6 +58,10 @@ function cursorAnimation (){
   })
   Shery.makeMagnet("#nav-part-2 h4");
 }
+
+window.addEventListener("load", function(){
+  window.scrollTo(0, 0);
+});
 
 
 loadingAnimation();
