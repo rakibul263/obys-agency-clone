@@ -123,6 +123,9 @@ html, body{
 .hero{
   width: 72%;
   margin-left: 27%;
+  height: fit-content;
+  overflow: hidden;
+  z-index: 9999;
 }
 .hero:nth-child(2){
   margin-top: 20vh;
@@ -132,4 +135,23 @@ html, body{
   font-weight: 600;
   text-transform: uppercase;
   line-height: 7.3vw;
+}
+#hero-3{
+  display: flex;
+  align-items: center;
+}
+.hero h2, .hero h3{
+  font-size: 8vw;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 7.3vw;
+}
+#hero-3 h2{
+  text-decoration: underline;
+  text-decoration-thickness: 10px;
+}
+.hero h2:hover{
+  -webkit-text-stroke: 1px #fff;
+  font-weight: 500;
+  color: transparent;
 }

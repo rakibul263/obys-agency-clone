@@ -28,7 +28,7 @@ tl.to(".line h2", {
 tl.to("#loader", {
   opacity: 0,
   duration: 0.2,
-  delay:3.8,
+  delay:1,
 })
 tl.from("#page1", {
   delay: 0.2,
@@ -40,9 +40,14 @@ tl.from("#page1", {
 tl.to("#loader", {
   display: "none",
 })
+tl.from("#hero-1 h1, #hero-2 h1, #hero-3 h1, #hero-3 h2,  #hero-3 h3, #hero-4 h1 ", {
+  y: 120,
+  stagger: 0.2,
+})
+tl.from("#nav", {
+  opacity: 0,
+})
 }
-loadingAnimation();
-
 // mouse hover
 function cursorAnimation (){
   document.addEventListener("mousemove", function(dets){
@@ -53,4 +58,7 @@ function cursorAnimation (){
   })
   Shery.makeMagnet("#nav-part-2 h4");
 }
+
+
+loadingAnimation();
 cursorAnimation();
