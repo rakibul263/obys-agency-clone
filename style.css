@@ -9,6 +9,16 @@ html, body{
   height: 100%;
   width: 100%;
 }
+#crsr{
+  height: 2.3vw;
+  width: 2.3vw;
+  border-radius: 50%;
+  border: 1px solid rgba(245, 245, 245, 0.57);
+  z-index: 99999;
+  position: fixed;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+}
 #loader{
   height: 100%;
   width: 100%;
@@ -91,4 +101,35 @@ html, body{
   height: 100vh;
   width: 100%;
   background-color: #151515;
+}
+#page1 #nav{
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  padding: 2.3vw 4.5vw;
+}
+#nav #nav-part-2{
+  display: flex;
+  gap: 3vw;
+  align-items: center;
+  justify-content: center;
+}
+#nav #nav-part-2 h4{
+  font-size: 0.8vw;
+  font-weight: 500;
+}
+
+/* hero section */
+.hero{
+  width: 72%;
+  margin-left: 27%;
+}
+.hero:nth-child(2){
+  margin-top: 20vh;
+}
+.hero h1{
+  font-size: 8vw;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 7.3vw;
 }
