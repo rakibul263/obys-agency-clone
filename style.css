@@ -124,8 +124,9 @@ html, body{
   width: 72%;
   margin-left: 27%;
   height: fit-content;
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: 9999;
+  overflow-x: visible;
 }
 .hero:nth-child(2){
   margin-top: 20vh;
@@ -135,6 +136,18 @@ html, body{
   font-weight: 600;
   text-transform: uppercase;
   line-height: 7.3vw;
+}
+#hero-1 h1{
+  position: relative;
+}
+#hero-1 h1::before{
+  content: "01";
+  position: absolute;
+  font-family: 'silk serif';
+  font-size: 4vh;
+  left: -12%;
+  top: -19%;
+  font-weight: 500;
 }
 #hero-3{
   display: flex;
@@ -217,6 +230,16 @@ html, body{
   font-size: 7vw;
   text-transform: uppercase;
   /* margin-bottom: 45px; */
+  position: relative;
+}
+#page-4-content h1::before{
+  content: "03";
+  position: absolute;
+  font-family: 'silk serif';
+  font-size: 4vh;
+  left: -12%;
+  top: 10%;
+  font-weight: 500;
 }
 .underline{
   border-top: 0.4vh solid;
@@ -326,4 +349,50 @@ span{
   -webkit-text-stroke: 1px #fff;
   color: transparent;
   font-weight: 400;
+}
+#footer{
+  min-height: 80vh;
+  width: 100%;
+  position: relative;
+  padding-left: 28vw;
+}
+#footer h1{
+  font-size: 12vh;
+  text-transform: uppercase;
+  position: relative;
+}
+#footer h1::before{
+  content: "04";
+  position: absolute;
+  font-family: 'silk serif';
+  font-size: 4vh;
+  left: -12%;
+  top: 10%;
+  font-weight: 500;
+}
+.underline1{
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  margin: 2vw 0;
+}
+.email{
+  text-decoration: underline;
+}
+.footer-flex{
+  display: flex;
+  justify-content: space-between;
+  padding: 2vw 6vw 2vw 0;
+}
+.footer-flex h5{
+  font-size: 2vh;
+  margin-bottom: 2vh;
+}
+.footer-flex h4{
+  font-size: 3vh;
+  font-weight: 400;
+}
+.copy{
+  font-weight: bold;
+  font-size: 1.5lvh;
 }
