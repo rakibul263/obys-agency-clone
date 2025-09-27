@@ -207,7 +207,7 @@ html, body{
   width: 100%;
   /* background-color: rgb(61, 61, 61); */
   position: relative;
-  padding-top: 5vh;
+  padding-top: 7vh;
 }
 #page-4-content{
   width: 65vw;
@@ -237,4 +237,93 @@ html, body{
 }
 .flex-content p{
   width: 15vw;
+}
+#page-4-blue-div{
+  background-color: #3f7df4;
+  width: 30vw;
+  padding: 4vw 2vw;
+  position: relative;
+  margin-top: -25vh;
+  margin-left: 25vw;
+}
+.blue-div-elem{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 2vw;
+  border-bottom: 0.2vh solid;
+}
+.blue-div-elem p{
+  width: 50%;
+  font-size: 1.3vh;
+  padding-left: 4vw;
+}
+.blue-div-elem h4{
+  font-size: 1.35vw;
+  font-weight: 500;
+}
+#page5{
+  min-height: 100vh;
+  width: 100vw;
+}
+.elem{
+  /* background-color: red; */
+  white-space: nowrap;
+  overflow-x: auto;
+  margin-bottom: 2vw;
+}
+.elem h1{
+  font-size: 7vw;
+  -webkit-text-stroke: 1px #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: transparent;
+  display: inline-block;
+  margin-right: 16px;
+  animation-name: marque;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes marque {
+  from{
+    transform: translateX(0);
+  }
+  to{
+   transform: translateX(-100%);
+  }
+}
+.elem2{
+  /* background-color: red; */
+  white-space: nowrap;
+  overflow-x: auto;
+  margin-bottom: 2vw;
+}
+.elem2 h1{
+  font-size: 7vw;
+  -webkit-text-stroke: 1px #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: transparent;
+  display: inline-block;
+  margin-right: 16px;
+  animation-name: marque2;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes marque2 {
+  from{
+    transform: translateX(-100%);
+  }
+  to{
+   transform: translateX(0);
+  }
+}
+span{
+  font-style: italic;
+  font-family: 'silk serif';
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  font-weight: 400;
 }
