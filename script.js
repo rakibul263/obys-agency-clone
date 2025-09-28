@@ -74,16 +74,16 @@ tl.from("#nav", {
   opacity: 0,
 })
 }
-// mouse hover
-function cursorAnimation (){
-  document.addEventListener("mousemove", function(dets){
-  gsap.to("#crsr",{
-      left: dets.x,
-      top: dets.y,
-    })
-  })
-  Shery.makeMagnet("#nav-part-2 h4");
-}
+// // mouse hover
+// function cursorAnimation (){
+//   document.addEventListener("mousemove", function(dets){
+//   gsap.to("#crsr",{
+//       left: dets.x,
+//       top: dets.y,
+//     })
+//   })
+//   Shery.makeMagnet("#nav-part-2 h4");
+// }
 
 window.addEventListener("load", function(){
   window.scrollTo(0, 0);
@@ -97,7 +97,44 @@ function sheryAnimation() {
   })
 }
 
+function cursorAnimation() {
+  Shery.mouseFollower({
+    skew: true,
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    duration: 1,
+  });
+  Shery.makeMagnet("#nav-part2 h4");
+  let videoContainer = document.querySelector("#video-container");
+  let video = document.querySelector("#video-container video");
+  videoContainer.addEventListener("mouseenter", function(){
+    videoContainer.addEventListener("mousemove", function (dets) {
+      gsap.to(".mousefollower", {
+        opacity: 0,
+      })
+      gsap.to("#video-crsr", {
+        left: dets.x - 570,
+        y:dets.y - 100,
+      })
+    })
+  });
+  videoContainer.addEventListener("mouseleave", function () {
+    gsap.to(".mousefollower", {
+      opacity: 1,
+    })
+    gsap.to("#video-crsr", {
+      left: "70%",
+      top: "-15%",
+    })
+  })
+  videoContainer.addEventListener("click",function() {
+    video.play();
+    video.style.opacity=  1;
+    videoContainer.style.backgroundImage = "none";
+  })
+}
+
 locomotiveJS();
 loadingAnimation();
 cursorAnimation();
 sheryAnimation();
+mouseFollower();
