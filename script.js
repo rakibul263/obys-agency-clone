@@ -133,12 +133,18 @@ function cursorAnimation() {
       video.style.opacity=  1;
       document.querySelector("#video-crsr").innerHTML = `<i class="ri-pause-circle-line"></i>`
       videoContainer.style.backgroundImage = "none";
+      gsap.to("#video-crsr", {
+        scale: 0.5,
+      })
       flag = 1;
     }else{
       video.pause();
       video.style.opacity=  1;
       document.querySelector("#video-crsr").innerHTML = ` <i class="ri-play-fill"></i>`
       videoContainer.style.backgroundImage = "none";
+      gsap.to("#video-crsr", {
+        scale: 1,
+      })
       flag = 0;
     }
   })
