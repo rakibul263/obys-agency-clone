@@ -126,10 +126,21 @@ function cursorAnimation() {
       top: "-15%",
     })
   })
+  let flag = 0;
   videoContainer.addEventListener("click",function() {
-    video.play();
-    video.style.opacity=  1;
-    videoContainer.style.backgroundImage = "none";
+    if(flag == 0){
+      video.play();
+      video.style.opacity=  1;
+      document.querySelector("#video-crsr").innerHTML = `<i class="ri-pause-circle-line"></i>`
+      videoContainer.style.backgroundImage = "none";
+      flag = 1;
+    }else{
+      video.pause();
+      video.style.opacity=  1;
+      document.querySelector("#video-crsr").innerHTML = ` <i class="ri-play-fill"></i>`
+      videoContainer.style.backgroundImage = "none";
+      flag = 0;
+    }
   })
 }
 
