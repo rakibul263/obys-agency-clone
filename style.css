@@ -130,9 +130,10 @@ html, body{
   width: 72%;
   margin-left: 27%;
   height: fit-content;
-  overflow: hidden;
+  overflow-y: hidden;
   z-index: 9999;
   overflow-x: visible;
+  position: relative;
 }
 .hero:nth-child(2){
   margin-top: 20vh;
@@ -534,4 +535,12 @@ span{
 ._canvas_container{
   z-index: 999999 !important;
   pointer-events: none;
+}
+#flag{
+  height: 25vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  opacity: 0;
 }
